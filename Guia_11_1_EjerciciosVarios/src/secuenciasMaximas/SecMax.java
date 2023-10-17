@@ -42,9 +42,11 @@ public class SecMax {
 				longitudSecActual = 0;
 			}
 		}
+		
+		if (longitudSecActual > longitudDeLaSecMAx)
+			longitudDeLaSecMAx = longitudSecActual;
 
 		return longitudDeLaSecMAx;
-
 	}
 
 }

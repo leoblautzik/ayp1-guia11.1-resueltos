@@ -21,5 +21,31 @@ class SecuenciasMaximasTests {
 		assertEquals(2, sm.longitudSecuenciaMaxima());
 		
 	}
+	
+	@Test
+	void todosValidosTest() {
+		int v[] = {7, 11, 19, 11, 17};
+		SecMax sm = new SecMax(v);
+		assertEquals(5, sm.longitudSecuenciaMaxima());
+		
+	}
+	
+	@Test
+	void todosInValidosTest() {
+		int v[] = {2,3,5,6,9,10,15,6,70};
+		SecMax sm = new SecMax(v);
+		assertEquals(0, sm.longitudSecuenciaMaxima());
+		assertEquals(0, sm.cuantosValoresValidos());
+		
+	}
+	
+	@Test
+	void sinDatosTest() {
+		int v[] = {};
+		SecMax sm = new SecMax(v);
+		assertEquals(0, sm.longitudSecuenciaMaxima());
+		assertEquals(0, sm.cuantosValoresValidos());
+		
+	}
 
 }
