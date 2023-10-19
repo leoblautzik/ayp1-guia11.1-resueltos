@@ -19,14 +19,13 @@ public class Secreto {
 					secreto += this.mensajeCodificado.charAt(i);
 					i++;
 				}
-				i++;
 				secreto = this.invertir(secreto);
 				mensajeDecodificado += secreto;
 				secreto = "";
 			} else {
 				mensajeDecodificado += this.mensajeCodificado.charAt(i);
-				i++;
 			}
+			i++;
 		}
 		return mensajeDecodificado;
 	}

@@ -20,8 +20,8 @@ class SecretosTest {
 	}
 	
 	@Test
-	void nadaSecretoTest() {
-		Secreto s = new Secreto("Hoy a las 22 hs. nos reunimos en casa de Marcelo");
+	void variosSecretosTest() {
+		Secreto s = new Secreto("Hoy a (sal) 22 hs. (son) reunimos en casa de Marcelo()");
 		assertEquals("Hoy a las 22 hs. nos reunimos en casa de Marcelo", s.decodificar());
 	}
 	
@@ -33,7 +33,7 @@ class SecretosTest {
 	
 	@Test
 	void secretoVacioTest() {
-		Secreto s = new Secreto("Hola() como estas");
+		Secreto s = new Secreto("Hola() (omoc) estas");
 		assertEquals("Hola como estas", s.decodificar());
 	}
 
